@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="navbar">
             <Link to="/" >
             <div className="leftNav">
-                E-Commerce
+                Plant Shop
             </div>
             
             </Link>
