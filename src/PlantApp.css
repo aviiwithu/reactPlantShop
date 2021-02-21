@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Roboto:wght@300;500&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+:root{
+  --mainGreen: #699b2c8f;
+  --darkGreen: #1a320f;
+  --lightGreen: #9ea5958f;
+  --mainWhite: #f9feff;
+}
+.nav{
+  background: var(--mainGreen);
+  color: var(--mainWhite);
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 1.2rem;
+  height: 4.0rem;
+  align-items: center;
+}
+.rightNav{
+  background: var(--lightGreen);
+  padding:4px 11px;
+  border:2px solid var(--mainWhite);
+  border-radius: 20px;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.firstSection::after{
+  position: relative;
+  content: "Shop And Decorate";
+    left: 39%;
+    bottom: 325px;
+    color: #f3ecec;
+    font-size: 34px;
+    border-radius: 20px;
+    background: #847e7e82;
+    padding: 10px 12px;
+}
+.firstSection img{
+  width: 100vw;
+}
+.secondSection{
+  display: flex;
+  margin: 0px 1rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.card1{
+  position: relative;
+  margin: 0px 0.3rem;
+  overflow: hidden;
+  height: 270px;
+
+}
+.card1 img{
+  /* border:2px solid black; */
+  border-radius: 10px;
+}
+
+.cardText{
+     position: relative;
+     top: -20%;
+     font-size: 26px;
+     color: #2aaf35;
+     background: #f3f3f3d9;
+     padding: 5px 6px;
+     /* border-radius: 10px; */
+     text-align: center;
+     opacity: 0;
+}
+.card1:hover .cardText{
+  transition: 0.5s ease;
+  opacity: 1;
+}
+.largeCardContainer{
+  display: flex;
+    justify-content: space-around;
+    margin: 1rem 2rem;
+    flex-wrap: wrap;
+}
+.largeCardContainer img{
+  border-radius: 10px;
+}
+.largeCardText{
+  position: relative;
+    top: -50%;
+    left: -50%;
+    background: #ebf3f3c7;
+    padding: 1rem 1.3rem;
+    font-size: 24px;
+    border-radius: 18px;
+}
