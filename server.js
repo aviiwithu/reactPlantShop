@@ -1,8 +1,11 @@
 const express = require("express");
+const path = require('path');
 const cors = require("cors");
 const { v4: uuidv4 } = require('uuid');
 const stripe = require("stripe")("sk_test_51IMt8rDdOF8mJ1GdjT7Uk993M9RoP6uQ9FrcxcmcUZ20TDqVuoOMFMjsddED0g1LoFQo8VrG2AEXQZSGF8gC6ELz00glzigGTc");
 const app = express();
+app.use(express.static(path.join(__dirname, 'build')));
+
 app.use(cors());
 app.use(express.json());
 app.get("/",(req,res)=>{
