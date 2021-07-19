@@ -102,15 +102,19 @@ html{
     transform: translate(0px,-3px);
 }
 .cartCard{
-    display: flex;
-    justify-content: space-around;
+    /* display: flex;
+    justify-content: space-around; */
     /* border:2px solid var(--mainColor); */
     align-items: center;
-    padding:11px 0px;
+    padding: 6px 0px;
+    display: grid;
+    grid-template-columns: 154px auto 150px 93px 86px 50px;
+    
 }
 .cartCard img{
-    height:80px;
+    height:90px;
     width: auto;
+    margin: auto;
 }
 
 .qtyUpdate{

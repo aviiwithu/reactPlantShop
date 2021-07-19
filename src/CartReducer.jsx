@@ -1,3 +1,6 @@
+
+import {toast} from 'react-toastify';
+
 export const CartReducer = ((state,action)=>{
     let product;
     let updatedPrice;
@@ -5,12 +8,24 @@ export const CartReducer = ((state,action)=>{
     let index;
     const{cart,qty,totalPrice}= state;
 
+    const notify=(title)=>{
+        toast.success(`${title} added to cart`, {
+            position: toast.POSITION.TOP_RIGHT,
+            autoClose: 1500
+          });
+    }
+
     switch (action.type) {
         case "addToCart":
             const checkProduct = cart.find(item=> item.id ===action.id);
             if(checkProduct){
+                toast.warn("Already in Cart",{
+                    position: toast.POSITION.TOP_RIGHT,
+                    autoClose: 1500
+                })
                 return state
             } else {
+                notify(action.product.title);
                 product = action.product;
                 product["qty"] = 1;
                 updatedQty = qty +1;

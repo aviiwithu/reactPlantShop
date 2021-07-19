@@ -11,7 +11,6 @@ import 'react-toastify/dist/ReactToastify.css';
 toast.configure()
 const Cart = (props) => {
     const {cart,dispatch,totalPrice,qty} = useContext(CartContext);
-    console.log(props);
 
     const handleToken = async (token)=>{
         const product = {name:"All product",price:totalPrice}
